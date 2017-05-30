@@ -5,7 +5,7 @@ To install dependences, with the environment activate:
 ```pip install -r requirements.txt```
 
 #### FIELDS MODEL
-* **id**: post id, self-generated
+* **id**: comment id, self-generated
 * **comment**: comment
 * **post_id**: id of the post which responds to
 * **response_to**: in case the comment is a reply of another comment,
