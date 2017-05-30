@@ -1,5 +1,5 @@
 # Comments microservice from WellDone
-This is the **comments** microservice from WellDone: the KeepCoding Bootcamp final practise
+This is the **comments** microservice from WellDone: the KeepCoding Bootcamp final practice
 
 To install dependences, with the environment activate:
 ```pip install -r requirements.txt```
