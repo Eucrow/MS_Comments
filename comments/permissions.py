@@ -11,17 +11,15 @@ class CommentPermission(BasePermission):
         Returns: True si el usuario puede acceder
         """
 
-        ## only authenticated users can create a comment:
-        # if request.method == "POST" and request.user.is_authenticated(): #doesn't work
-        if request.method == "POST" and request.user.authenticated:
+        # only authenticated users can create a comment:
+        if request.method == "POST" and request.user.is_authenticated():
             return True
 
         if request.method == "GET":
             return True
 
-        ## the rest, without permissions
+        # the rest, without permissions
         return False
-
 
     def has_object_permission(self, request, view, obj):
         """

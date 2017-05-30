@@ -11,7 +11,9 @@ class FakeUser(object):
         self.pk = id
         self.id = id
         self.username = username
-        self.authenticated = True
+
+    def is_authenticated(self):
+        return True
 
 
 class JSONAuthentication(BaseAuthentication):
