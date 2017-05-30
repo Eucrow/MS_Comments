@@ -11,7 +11,7 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = ('__all__')
 
 
-class CommentListSerializer(CommentSerializer):
-    class Meta(CommentSerializer.Meta):  # el PostSerializer.Meta dice que herede la clase Meta también del
-                                # PostSerializer. Si no se pone, por defecto no la hereda
-        fields = ("comment",)
+# class CommentListSerializer(CommentSerializer):
+#     class Meta(CommentSerializer.Meta):  # el PostSerializer.Meta dice que herede la clase Meta también del
+#                                 # PostSerializer. Si no se pone, por defecto no la hereda
+#         fields = ("comment", "post_id", "comment_author", "publication_datetime", "response_to")

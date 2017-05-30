@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from comments.api import ListCreateCommentAPI
+from comments.api import CreateCommentAPI, ListCommentAPI, NumberOfCommentsAPI
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^api/1.0/create_comment', ListCreateCommentAPI.as_view(), name="create_comment")
+    url(r'^api/1.0/comment/(?P<url>[0-9]+)$', ListCommentAPI.as_view(), name="list_comments"),
+    url(r'^api/1.0/comment/number/(?P<post_id>[0-9]+)$', NumberOfCommentsAPI.as_view(), name="number_of_comments"),
+    url(r'^api/1.0/comment/', CreateCommentAPI.as_view(), name="create_comment")
 ]
