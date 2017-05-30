@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Comment(models.Model):
-    # the id field received is the id field from posts model.
+    # the post_id field received is the id field from posts model.
     post_id = models.PositiveIntegerField(blank=False)
     comment = models.TextField(blank=False)
     # The response_to field is the comment id which is responded.
